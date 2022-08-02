@@ -16,9 +16,14 @@ library(palmerpenguins)
 
 ```{r}
 ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) +
-  geom_point(aes(color = species), size = 2)
+  geom_point(aes(color = species), size = 2) +
+  facet_wrap(~island) +
+  theme_minimal() +
+  labs(x = "Body mass (g)", y = "Flipper length (mm)",)
 
 #when only "geom_point()" is used/not separated by species variable: This looks like there is a positive linear relationship between body mass and flipper length across all three penguin species. Aes used specifically for graphing variables based on aesthetics. Not referring to a variable, like size of dots -- outside of "aes()"  
+
+#"~" in facet_Wrap() means as a function of 
 
 ```
 
