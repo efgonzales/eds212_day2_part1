@@ -11,13 +11,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Derivatives in R
 
-Find the derivative of $f(x) = 5x^2$ (use "\$" Latex coding language? to format as equation)
+Find the derivative of $f(x) = 5x^2$ (use "\$" Latex coding language to format as equation)
 
 ```{r}
-ex_1 <- expression(5 * x ^ 2) #after running, it will show up in environment. "expression()" generic placeholder...creates unevaluated expression to feed into function (deriv func can use expression)
-?expression
+ex_1 <- expression(5 * x ^ 2) 
+#after running, it will show up in environment. "expression()" generic placeholder...creates unevaluated expression to feed into function (deriv func can use expression)
 
-my_derivative <- deriv(ex_1, "x") #"x" tells R to take the derivative with respect to x
+
+my_derivative <- deriv(ex_1, "x") 
+#"x" tells R to take the derivative with respect to x
 my_derivative
 
 #Find the slope at x = 2.8
@@ -31,7 +33,8 @@ Find the slope of $g(z) = 2z^3-10.5z^2+4.1$
 ```{r}
 gz <- expression(2 * z ^ 3 - 10.5 * z ^ 2 + 4.1)
 
-dg_dz <- D(gz, "z") # "D()" works the same as "deriv()"
+dg_dz <- D(gz, "z") 
+# "D()" works the same as "deriv()"
 dg_dz
 
 #Evaluate the slope over a range of values.
@@ -41,7 +44,5 @@ eval(dg_dz)
 
 ```
 
-Test2
 
-Test 3 push to github!
 
